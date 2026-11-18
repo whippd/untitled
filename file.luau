@@ -952,7 +952,7 @@ local function equipBest()
 	if _G.AutoLawnBoss == true and equipdps == true and islawnbosshere == true then return end
 	local best = getBestTool()
 	if best then
-		task.wait(.25)
+		task.wait(0.25)
 		if islawnbosshere == return end
 		EquipRemote:FireServer("Tool", best)
 	end
