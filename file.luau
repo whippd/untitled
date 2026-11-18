@@ -289,10 +289,11 @@ local function stopFarm()
 end
 
 local function startFarm()
+	print("startFarm called")
 	if farmThread then
 		return
 	end
-	print("startFarm called")
+	print("passed thread")
 	lastRelativeCFs = {}
 	lastFireTimes = {}
 	farmThread = task.spawn(function()
@@ -1081,6 +1082,11 @@ MainLawn:AddToggle({
 				while autoMow do
 					local success, err = pcall(MowLawn)
 					task.wait(mowLoopDelay)
+					local ping = math.round(game:GetService("Players").LocalPlayer:GetNetworkPing() * 1000)
+					while ping > 500 do 
+						ping = math.round(game:GetService("Players").LocalPlayer:GetNetworkPing() * 1000)
+						task.wait(0.5)
+					end
 				end
 				mowThread = nil
 			end)
