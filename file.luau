@@ -136,7 +136,7 @@ local function sendWebhook(title, intervalStats)
 			},
 			footer = {
 				text = "Paciation Tech Arena Farm",
-				icon_url = "https://cdn.discordapp.com/attachments/394939426565783562/149231223966597130/Medal_nX24dR4vRN.png?ex=69d6f0cd&is=69d59f4d&hm=4c1dbb51a4575363be57f0a013fbdc1366c99074a6403262a2983928af8be2c7" 
+				icon_url = "https://cdn.discordapp.com/attachments/394939426565783562/1491231223966597130/Medal_nX24dR4vRN.png?ex=69d6f0cd&is=69d59f4d&hm=4c1dbb51a4575363be57f0a013fbdc1366c99074a6403262a2983928af8be2c7" 
 			}
 		}}
 	}
