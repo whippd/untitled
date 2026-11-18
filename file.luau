@@ -292,6 +292,7 @@ local function startFarm()
 	if farmThread then
 		return
 	end
+	print("startFarm called")
 	lastRelativeCFs = {}
 	lastFireTimes = {}
 	farmThread = task.spawn(function()
