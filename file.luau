@@ -953,7 +953,7 @@ local function equipBest()
 	local best = getBestTool()
 	if best then
 		task.wait(0.25)
-		if islawnbosshere == return end
+		if islawnbosshere == true then return end
 		EquipRemote:FireServer("Tool", best)
 	end
 end
