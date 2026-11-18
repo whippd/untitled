@@ -1200,8 +1200,15 @@ MainLawnBosses:AddToggle({
 						if not bv then
 							if equipdps then
 								local best = getBestDPS()
+								
 								if best then
+									print("best tool found")
+									print(best)
+									task.wait(0.5)
 									EquipRemote:FireServer("Tool", best)
+									print("equipped best")
+								else
+									print("best tool for dps not found")
 								end
 							end
 							char:PivotTo(CFrame.new(rootPart.Position.X, -495, rootPart.Position.Z))
